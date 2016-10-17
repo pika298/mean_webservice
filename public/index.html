@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Service Client Maker</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body ng-app="ServiceClientMaker">
+	<div class="container" ng-controller="ServiceCtrl">
+		<h1>Service Client Maker</h1>
+
+		<!--Full Name: {{firstName + " " + lastName}}-->
+
+		<table class="table">
+			<thead>
+				<tr>
+				  <th>Name</th>
+				  <th>Favorite Color</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="serviceClient in serviceClients">
+					<td>
+						{{serviceClient.name}}
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+
+	<!-- library -->
+  <script src="js/angular.min.js"></script>
+  <script src="features/services/controller.js"></script>
+</body>
+</html>
